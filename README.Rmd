@@ -1,4 +1,6 @@
 
+<img src=https://github.com/julianlavila/My_CV/blob/master/img/cvPreview.png width="100%">
+
 [![](./img/cvPreview.png)](https://github.com/julianlavila/My_CV/blob/master/img/cvPreview.png)
 ---
 
