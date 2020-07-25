@@ -1,3 +1,4 @@
+
 [![](./img/cvPreview.png)](https://github.com/julianlavila/My_CV/blob/master/img/cvPreview.png)
 ---
 
@@ -32,3 +33,9 @@ img2 <- readPNG("C:/Users/julia/Documents/HEX/vitae.png")
 
 Ultima vez actualizado en "`r format(Sys.time(), '%d %B, %Y')`".
 
+<<<<<<< HEAD:README.Rmd
+=======
+
+
+
+>>>>>>> 9d5562ef8282e8c22dd1716c184df3c3b8cfd343:README.md
