@@ -32,5 +32,3 @@ img2 <- readPNG("C:/Users/julia/Documents/HEX/vitae.png")
 
 Ultima vez actualizado en "`r format(Sys.time(), '%d %B, %Y')`".
 
-
-
