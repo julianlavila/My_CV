@@ -1,0 +1,129 @@
+---
+name: Julián 
+surname: Avila-Jiménez
+position: "Candidato Maestria en Ciencias Biológicas "
+address: "Universidad Pedagógica y Tecnológica de Colombia"
+profilepic: "./img/roundSelfieIcon.jpg"
+#www: bryanjenks.xyz
+email: "julianleonardo.avilajimenez@gmail.com"
+linkedin: julian leonardo Avila Jimenez
+github: julianlavila
+orcid: 0000-0002-5768-1746
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 990000
+phone: +57 300 2206592
+aboutme: "Biólogo con experiencia en trabajo investigativo, excelente capacidad para el trabajo en campo y con comunidades, especial interés en entomología médica, conservación de ecosistemas y fauna amenazada. Manejo de lenguaje de programación R Statistics y software de SIG (ArcGis, QGis). Escalador en roca y dosel con amplio conocimiento de seguridad en alturas y experiencia en el montaje de sistemas de seguridad en alturas, fotógrafo aficionado y editor fotográfico. Disposición a viajar, liderazgo, capacidades pedagógicas, habilidad para la observación y el análisis de sucesos y datos, buena redacción, eficiente, organizado, responsable, emprendedor, con buenas relaciones interpersonales y con disponibilidad para el aprendizaje y adaptación al cambio."
+docname: CV
+lang: es-ES
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data sctructure for tribbles
+             ,'tidyverse'  # The Pipe %>%
+             ,'here'      # Relative Filepaths
+             ,'readr'
+             , 'RefManageR'# Data Loading
+            )
+
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+library(tidyverse)
+# Packages loading
+lapply(packages, library, character.only = TRUE) %>% invisible()
+source(file = here("r","data.r"),encoding="UTF-8")
+
+
+
+```
+
+# Habilidades
+
+```{r SKILLS}
+
+skills %>% 
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+
+```
+
+# Educación
+
+```{r EDUCATION}
+
+edu %>%
+  detailed_entries(
+    what = degree,
+    with = inst,
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Experiencia profesional
+
+```{r EMPLOYMENT}
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Certificaciones
+
+```{r CERTIFICATIONS}
+
+certifications %>%
+ detailed_entries(
+   what = area,
+   why = detail,
+   when = year,
+   where = where
+ )
+
+```
+
+----------------------------------------------------------------------
+Elaborado en <br/>
+
+```{r fig.width=0.5, fig.height=0.5,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("C:/Users/julia/Documents/HEX/rmarkdown.png")
+ grid.raster(img,x = unit(0.5, "npc"), y = unit(0.5, "npc"))
+
+```
+```{r fig.width=0.5, fig.height=0.5,echo=FALSE}
+library(png)
+library(grid)
+
+img2 <- readPNG("C:/Users/julia/Documents/HEX/vitae.png")
+ grid.raster(img2,x = unit(0.5, "npc"), y = unit(0.5, "npc"))
+
+```
+
+[RMarkdown](https://rmarkdown.rstudio.com/) 
+[Vitae](https://pkg.mitchelloharawild.com/vitae/) <br/>
+
+[Resumen disponible](http://rpubs.com/julianlavila/CV_Resume/)
+
+Ultima vez actualizado en "`r format(Sys.time(), '%d %B, %Y')`".
+
