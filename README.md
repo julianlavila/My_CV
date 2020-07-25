@@ -4,10 +4,13 @@
 
 ## My Data Driven *curriculum vitae*
 
+---
+### Made in
+
 [RMarkdown](https://rmarkdown.rstudio.com/) 
 [Vitae](https://pkg.mitchelloharawild.com/vitae/) <br/>
 
-[Resumen disponible](http://rpubs.com/julianlavila/CV_Resume/)
+[Resume avaliable](http://rpubs.com/julianlavila/CV_Resume/)
 
 =======
 
